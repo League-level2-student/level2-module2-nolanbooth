@@ -1,6 +1,6 @@
 //*
 // ***** SEGMENT CLASS *****
-// This class will be used to represent each part of the moving snake.
+// This class will be used to represent each part of the moving snake. :)
 //*
 
 class Segment {
