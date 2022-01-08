@@ -1,5 +1,5 @@
 //*
-// ***** SEGMENT CLASS *****
+// ***** SSSSSSSSSEGMENT CLASS *****
 // This class will be used to represent each part of the moving snake. :)
 //*
 
