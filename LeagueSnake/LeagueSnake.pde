@@ -33,7 +33,7 @@ ArrayList<Segment> tail= new ArrayList<Segment>();
 //*
 
 void setup() {
-  frameRate(25);
+  frameRate(10);
   size(1000, 1000);
   head = new Segment((int)random(100) * 10,(int)random(100) * 10);
   
@@ -62,6 +62,7 @@ drawFood();
 //DRAW SNAKE STUFF
 fill(10,10,200);
 drawSnake();
+eat();
 keyPressed();
 move();
 
@@ -79,6 +80,9 @@ void drawFood() {
 void drawSnake() {
   //Draw the head of the snake followed by its tail
   square(head.x, head.y, 10);
+manageTail();
+drawTail();
+
 }
 
 
@@ -91,6 +95,7 @@ void drawTail() {
   //Draw each segment of the tail 
 for(Segment s: tail){
   square(s.x, s.y, 10);
+  
 }
 }
 void manageTail() {
@@ -174,5 +179,10 @@ head.x = -10;
 
 void eat() {
   //When the snake eats the food, its tail should grow and more food appear
-
+  if(head.x == foodx && head.y == foody){
+    foodx = (int)random(100) * 10;
+    foody = (int)random(100) * 10;
+  foodEaten = foodEaten + 1;  
+  tail.add(new Segment(head.x, head.y));
+}
 }
