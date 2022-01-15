@@ -34,16 +34,16 @@ ArrayList<Segment> tail= new ArrayList<Segment>();
 
 void setup() {
   frameRate(10);
-  size(1000, 1000);
-  head = new Segment((int)random(100) * 10,(int)random(100) * 10);
+  size(800, 800);
+  head = new Segment((int)random(width/10) * 10,(int)random(height/10) * 10);
   
   dropFood();
 }
 
 void dropFood() {
   //Set the food in a new random location
-    foodx = (int)random(100) * 10;
-    foody = (int)random(100) * 10;
+    foodx = (int)random(width/10) * 10;
+    foody = (int)random(height/10) * 10;
 println(foody);
 println(foodx);
 }
@@ -112,10 +112,12 @@ void checkTailCollision() {
   //If the snake crosses its own tail, shrink the tail back to one segment
   for(Segment s: tail){
     if(head.x == s.x && head.y == s.y){
-      tail.clear();
-      tail.add(new Segment(head.x,head.y));
-    }
+      tail=new ArrayList<Segment>();
+     // tail.add(new Segment(head.x,head.y));
+     break; 
   }
+  
+}
 }
 
 
@@ -180,8 +182,7 @@ head.x = -10;
 void eat() {
   //When the snake eats the food, its tail should grow and more food appear
   if(head.x == foodx && head.y == foody){
-    foodx = (int)random(100) * 10;
-    foody = (int)random(100) * 10;
+    dropFood();
   foodEaten = foodEaten + 1;  
   tail.add(new Segment(head.x, head.y));
 }
