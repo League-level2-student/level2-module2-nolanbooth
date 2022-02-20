@@ -17,7 +17,7 @@ public class PepperoniPizza extends Pizza {
 	// 3. Copy the receipt() method from Pizza, but change it so a Pepperoni Pizza is $12
 	@Override
 	public void receipt() {
-		System.out.println("You purchased a pizza for $10");
+		System.out.println("You purchased a pepperoni pizza for $12");
 	}
 	// 4. Add the @Override tag
 	
