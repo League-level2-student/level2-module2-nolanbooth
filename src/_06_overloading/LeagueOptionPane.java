@@ -24,6 +24,7 @@ public class LeagueOptionPane {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		JLabel label = new JLabel();
+		
 		// 1. Open example.png and make a GUI that looks like that
 		//    The message parameter is what we want to show on our pop-up
 		frame.add(panel);  
@@ -62,7 +63,11 @@ public class LeagueOptionPane {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		JLabel label = new JLabel();
-
+		ImageIcon image = new ImageIcon();
+		JLabel imagelabel = new JLabel();
+		
+		image.equals(filename);
+		imagelabel.equals(image);
 		frame.add(panel);
 		frame.setVisible(true);
 		frame.add(label);
@@ -71,6 +76,7 @@ public class LeagueOptionPane {
 		frame.setSize(250,116);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		
 	}
 	// 7. Call this method in the Runner class
