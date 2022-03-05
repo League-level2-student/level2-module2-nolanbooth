@@ -55,6 +55,7 @@ public class LeagueOptionPane {
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle(title);
+		System.out.println("msg 2 - "+ message);
 	}
 	// 5. Call this method in the Runner class
 	// 6. Create another showMessageDialog() method that lets us choose the Message, Title, and Image
@@ -63,20 +64,21 @@ public class LeagueOptionPane {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		JLabel label = new JLabel();
-		ImageIcon image = new ImageIcon();
-		JLabel imagelabel = new JLabel();
+		ImageIcon image = new ImageIcon(filename);
+		JLabel imagelabel = new JLabel(image);
 		
-		image.equals(filename);
-		imagelabel.equals(image);
+		
+	
 		frame.add(panel);
 		frame.setVisible(true);
-		frame.add(label);
+		panel.add(label);
+		panel.add(imagelabel);
 		label.setText(message);
 		frame.setTitle(title);
-		frame.setSize(250,116);
+		frame.setSize(1920,1282);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		System.out.println("msg 3 - " + message);
 		
 	}
 	// 7. Call this method in the Runner class
