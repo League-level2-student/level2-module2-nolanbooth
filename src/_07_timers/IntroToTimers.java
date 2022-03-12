@@ -1,4 +1,4 @@
-package _07_timers;
+ package _07_timers;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -46,12 +46,13 @@ Timer timer;
 		// 2. Set the time variable to maxTime
 		time = maxTime;
 		// 3. Initialize timer to a new Timer object. For the first argument, use 1000/speed. For the second argument, use this
-		timer = new Timer(1000/speed, this);
+		timer = new Timer(10000/speed, this);
 		// 11. Run it! Notice how it doesn't update? That's because our timer isn't triggering the actionPerformed() method yet!
 		
 		// 12. Make the timer start!
 		timer.start();
 		// 13. Run the program. Is it possible for you to win? 
+		//nooo
 		// 14. Figure out how to make it harder or easier! (Which condition is most related to whether you win or not?)
 	}
 
@@ -74,7 +75,7 @@ Timer timer;
 		int keyCode = e.getKeyCode();
 		
 		// 4. if keyCode is 32 (that's the spacebar key!)...
-		if(keyCode == 32&&time <= 2) {
+		if(keyCode == 32&&time <= 5) {
 			JOptionPane.showMessageDialog(null, "You won");
 		}else {
 			time = maxTime;
